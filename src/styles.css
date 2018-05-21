@@ -18,7 +18,10 @@ li a {
   color: white;
   text-decoration: none;
 }
-li a:hover {
+.nav-top a:hover {
+  text-decoration: underline;
+}
+.nav li a:hover {
   color: #003996;
 }
 .container {
@@ -99,4 +102,43 @@ li a:hover {
   padding: 0 3px;
   border: 2px solid #6899C9;
   font-size: 12px;
+}
+.interests {
+  background-color: #6899C9;
+  margin-top: 10px;
+  border: 2px solid #6899C9;
+}
+.interests h5 {
+  color: white;
+  font-size: 12px;
+  margin-left: 15px;
+  padding: 3px;
+}
+.interests .interest-item {
+  display: flex;
+  border-top: 2px solid white;
+  border-bottom: 1px solid white;
+}
+.interests .interest-item .type {
+  flex: 1.4;
+  padding: 5px;
+  border-right: 3px solid white;
+  background-color: rgb(177, 208, 240);
+  font-size: 10px;
+}
+.interests .interest-item .info {
+  flex: 3;
+  padding: 5px;
+  background-color: rgb(213, 232, 251);
+  font-size: 12px;
+}
+.interests .interest-item .info ul {
+  flex-direction: column;
+}
+.interests .interest-item .info li {
+  color: black;
+}
+.interests .interest-item .info li a {
+  color: #003996;
+  font-weight: bold;
 }

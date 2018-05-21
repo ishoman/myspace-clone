@@ -48,22 +48,28 @@ module.exports = {
         }
       },
       {
-        test: /\.(png|jp(e*)g|svg)$/,
-        use: [{
-            loader: 'url-loader',
-            options: {
-                limit: 8000, // Convert images < 8kb to base64 strings
-                name: 'assets/[hash]-[name].[ext]'
-            }
-        }]
+        test:/\.html$/,
+        use: ['html-loader']
       },
+      // {
+      //   test: /\.(png|jp(e*)g|svg)$/,
+      //   use: [{
+      //       loader: 'url-loader',
+      //       options: {
+      //           limit: 8000, // Convert images < 8kb to base64 strings
+      //           name: '[name].[ext]'
+      //       }
+      //   }]
+      // },
       {
-        test: /.*\.(gif|png|jpe?g)$/i,
+        test: /\.(gif|png|jpe?g)$/,
         use: [
           {
             loader: 'file-loader',
             options: {
-              name: '/assets/[name]_[hash:7].[ext]',
+              name: '[name].[ext]',
+              outputPath: 'assets/',
+              publicPath: 'assets/'
             }
           }
         ]
