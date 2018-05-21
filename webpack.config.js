@@ -46,6 +46,27 @@ module.exports = {
         options: {
           presets: ['es2015']
         }
+      },
+      {
+        test: /\.(png|jp(e*)g|svg)$/,
+        use: [{
+            loader: 'url-loader',
+            options: {
+                limit: 8000, // Convert images < 8kb to base64 strings
+                name: 'assets/[hash]-[name].[ext]'
+            }
+        }]
+      },
+      {
+        test: /.*\.(gif|png|jpe?g)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '/assets/[name]_[hash:7].[ext]',
+            }
+          }
+        ]
       }
     ]
   }
