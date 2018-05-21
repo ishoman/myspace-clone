@@ -1,9 +1,9 @@
-# JS Template Repo for Epicodus
+# MySpace Clone for Epicodus
 
 ## By Bobby Martin
 
 # Description
-This is a template directory to make things go quicker in the morning.
+This is a clone of MySpace in HTML and css
 
 # Specifications
 * The program will hold the necessary files and folders for easy cloning
